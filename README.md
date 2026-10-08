@@ -6,7 +6,9 @@ Your own tool is welcome. Every entry is reviewed before it goes live.
 
 ## Add a tool
 
-**No git needed:** open a [Suggest a tool](../../issues/new?template=suggest-a-tool.yml) issue and fill in the form. When a maintainer labels it `accepted`, a bot checks it and adds it to the list.
+**No account needed:** use the Suggest it form under the results on [skillscout.si](https://skillscout.si/app). It lands here as an issue within the hour.
+
+**With a GitHub account:** open a [Suggest a tool](../../issues/new?template=suggest-a-tool.yml) issue and fill in the form. When a maintainer labels it `accepted`, a bot checks it and adds it to the list.
 
 **With a pull request:** add an entry to `tools.json`, run `node scripts/validate.mjs`, and open a PR.
 

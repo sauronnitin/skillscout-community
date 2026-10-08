@@ -1,0 +1,25 @@
+name: Import suggestions from skillscout.si
+
+# People without a GitHub account suggest tools on skillscout.si. Every hour
+# this opens a "Suggest a tool" issue for each one, for a maintainer to review.
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/import-suggestions.mjs
+        env:
+          SUGGEST_TOKEN: ${{ secrets.SUGGEST_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
