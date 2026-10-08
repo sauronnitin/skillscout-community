@@ -1,0 +1,67 @@
+name: Suggest a tool
+description: An MCP server, agent skill, plugin, app or extension SkillScout should know about.
+title: "Suggest: "
+labels: [suggestion]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for adding to the list. Someone reviews every suggestion before it goes live.
+        Your own tool is welcome; just say so below.
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: Figma MCP
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: The tool's page, repository or store listing. Must start with https://
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - MCP Server
+        - Claude Skill
+        - Plugin
+        - AI App
+        - Extension
+        - CLI Tool
+        - Automation
+        - Desktop App
+    validations:
+      required: true
+  - type: textarea
+    id: does
+    attributes:
+      label: What it does
+      description: One or two plain sentences, 20 to 300 characters. What problem it solves, for whom.
+      placeholder: Reads Figma files and turns frames into React components that use your own design tokens.
+    validations:
+      required: true
+  - type: input
+    id: install
+    attributes:
+      label: Install command
+      description: Optional. Only common shapes are accepted (npx, claude mcp add, /plugin install, npx skills add, code --install-extension, brew install, pip install, uvx).
+      placeholder: claude mcp add figma -- npx -y figma-mcp
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Optional, comma separated, up to 8.
+      placeholder: design, figma, react
+  - type: checkboxes
+    id: relation
+    attributes:
+      label: Your connection
+      options:
+        - label: I made this tool
+        - label: I use this tool
