@@ -46,6 +46,22 @@ People paste these into a terminal, so only these shapes pass the check:
 
 Anything else goes in `install_hint` instead.
 
+## For tool makers
+
+Once your tool is on the list, you can show it in your README:
+
+[![Listed on SkillScout](https://img.shields.io/badge/listed%20on-SkillScout-e6f77a?style=flat-square&labelColor=111111)](https://skillscout.si)
+
+```markdown
+[![Listed on SkillScout](https://img.shields.io/badge/listed%20on-SkillScout-e6f77a?style=flat-square&labelColor=111111)](https://skillscout.si)
+```
+
+## Other ways to help
+
+- **Tell us when a pick is wrong.** Every pick in SkillScout has Good pick and Not for me buttons, and there is a Feedback box on every screen. That is how the ranking gets better.
+- **Add a whole list.** If you keep an awesome list or a catalogue with a public file, open an issue with the link and SkillScout can read all of it.
+- **Share it** with someone who is drowning in tools.
+
 ## What gets turned down
 
 - Links that do not work, or tools that are not available yet
